@@ -90,6 +90,7 @@ export class Slide {
 
   slidesIndexNav(index) {
     const last = this.slideArray.length - 1;
+
     this.index = {
       prev: index ? index - 1 : undefined,
       active: index,
@@ -206,7 +207,6 @@ export class SlideNav extends Slide {
     this.controlArray = [...this.control.children];
 
     this.activeControlItem();
-    console.log(this.controlArray);
     this.controlArray.forEach(this.eventControl);
   }
 
